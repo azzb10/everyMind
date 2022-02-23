@@ -1,16 +1,10 @@
 /* eslint-disable prettier/prettier */
 import {StyleSheet, Text, View, TextInput, TouchableOpacity} from 'react-native';
 import React from 'react';
-import LottieView from 'lottie-react-native';
-
 
 const Register = ({navigation}) => {
   return (
     <View style={styles.container}>
-        <View style={{width: '50%', height: '20%', alignSelf: 'center'}}>
-
-<LottieView source={require('../utils/gifs/68794-cute-astronaut-operating-laptop.json')} autoPlay loop />
-</View>
         <View style={styles.login}>
             <Text style={styles.title}>Cadastro</Text>
             <TextInput placeholder="Nome" style={styles.inputText} />

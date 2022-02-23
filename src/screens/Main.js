@@ -2,7 +2,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import LottieView from 'lottie-react-native';
 
 const Main = () => {
   return (
@@ -15,12 +14,6 @@ const Main = () => {
           <Text style={styles.welcome}>Vamos enviar para o email abc@gmail.com as informações com os próximos passos.</Text>
           <Text style={[styles.welcome, {alignSelf: 'center', marginTop: 50, fontSize: 25}]}>Obrigado!</Text>
       </View>
-
-      <View style={{width: '50%', height: '20%', alignSelf: 'center'}}>
-
-<LottieView source={require('../utils/gifs/89032-victory-sign-baby-astronaut.json')} autoPlay loop />
-</View>
-
     </View>
 
   );
