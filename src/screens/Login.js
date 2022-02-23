@@ -7,6 +7,7 @@ import {
   TextInput,
   TouchableOpacity,
 } from 'react-native';
+import LottieView from 'lottie-react-native';
 
 export default function Login({navigation}) {
   return (
@@ -28,12 +29,17 @@ export default function Login({navigation}) {
           </View>
         </TouchableOpacity>
       </View>
+      <View style={{width: '50%', height: '50%', alignSelf: 'center'}}>
+
+<LottieView source={require('../utils/gifs/91574-astronaut-illustration.json')} autoPlay loop />
+</View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    paddingTop: 30,
     backgroundColor: '#2ecc71',
     flex: 1,
   },
@@ -44,6 +50,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 25,
     fontWeight: 'bold',
+    marginBottom: 40,
   },
   inputText: {
     borderWidth: 1,
