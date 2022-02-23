@@ -17,12 +17,12 @@ export default function Login({navigation}) {
         <TextInput placeholder="Senha" style={styles.inputText} />
       </View>
       <View style={styles.touchableWrapper}>
-        <TouchableOpacity onPress={() => {navigation.navigate('Main')}}>
+        <TouchableOpacity onPress={() => {navigation.navigate('Main');}}>
           <View style={styles.styleButton}>
             <Text> Login </Text>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => {navigation.navigate('Register')}}>
+        <TouchableOpacity onPress={() => {navigation.navigate('Register');}}>
           <View style={styles.styleButton}>
             <Text> Cadastrar </Text>
           </View>

@@ -15,14 +15,14 @@ const Register = ({navigation}) => {
             <TextInput placeholder="Senha" style={styles.inputText} />
         </View>
         <View>
-            <TouchableOpacity onPress={() => {navigation.navigate('Login')}}>
+            <TouchableOpacity onPress={() => {navigation.navigate('Login');}}>
             <View style={styles.styleButton}>
                 <Text> Confirmar </Text>
             </View>
             </TouchableOpacity>
         </View>
         <View>
-            <TouchableOpacity onPress={() => {navigation.pop()}}>
+            <TouchableOpacity onPress={() => {navigation.pop();}}>
             <View style={styles.styleCancelButton}>
                 <Text style={styles.cancelButton}> Cancelar </Text>
             </View>
@@ -78,5 +78,5 @@ const styles = StyleSheet.create({
       marginTop: 30,
       alignSelf: 'center',
       textDecorationLine: 'underline',
-    }
+    },
   });

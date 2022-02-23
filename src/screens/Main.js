@@ -1,4 +1,5 @@
 /* eslint-disable prettier/prettier */
+/* eslint-disable react-native/no-inline-styles */
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
@@ -11,7 +12,7 @@ const Main = () => {
       <View style={styles.texts}>
           <Text style={styles.welcome}>Bem Vindo a Everymind, Lucas Sena de 25 anos!</Text>
           <Text style={styles.welcome}>Vamos enviar para o email abc@gmail.com as informações com os próximos passos.</Text>
-          <Text style={[styles.welcome, {alignSelf: 'center', marginTop: 50, fontSize: 25,}]}>Obrigado!</Text>
+          <Text style={[styles.welcome, {alignSelf: 'center', marginTop: 50, fontSize: 25}]}>Obrigado!</Text>
       </View>
     </View>
 
@@ -36,7 +37,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         height: 400,
         padding: 20,
-        justifyContent: 'center'
+        justifyContent: 'center',
     },
     welcome: {
         fontSize: 20,
