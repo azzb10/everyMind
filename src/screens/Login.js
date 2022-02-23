@@ -1,7 +1,14 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
-import {View, Text, StyleSheet, Button, TextInput, TouchableOpacity} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  TextInput,
+  TouchableOpacity,
+} from 'react-native';
 
-const App = () => {
+export default function Login({navigation}) {
   return (
     <View style={styles.container}>
       <View style={styles.login}>
@@ -9,21 +16,21 @@ const App = () => {
         <TextInput placeholder="Usuário" style={styles.inputText} />
         <TextInput placeholder="Senha" style={styles.inputText} />
       </View>
-      <View style={styles.touchableWrapper}> 
-        <TouchableOpacity >
+      <View style={styles.touchableWrapper}>
+        <TouchableOpacity onPress={() => {navigation.navigate('Main')}}>
           <View style={styles.styleButton}>
             <Text> Login </Text>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => {navigation.navigate('Register')}}>
           <View style={styles.styleButton}>
             <Text> Cadastrar </Text>
           </View>
         </TouchableOpacity>
-      </View> 
+      </View>
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -61,5 +68,3 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
-
-export default App;
