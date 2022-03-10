@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "everyMind.app"
-               BlueprintName = "everyMind"
-               ReferencedContainer = "container:everyMind.xcodeproj">
+               BuildableName = "meuFilhoBoard.app"
+               BlueprintName = "meuFilhoBoard"
+               ReferencedContainer = "container:meuFilhoBoard.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "everyMindTests.xctest"
-               BlueprintName = "everyMindTests"
-               ReferencedContainer = "container:everyMind.xcodeproj">
+               BuildableName = "meuFilhoBoardTests.xctest"
+               BlueprintName = "meuFilhoBoardTests"
+               ReferencedContainer = "container:meuFilhoBoard.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "everyMind.app"
-            BlueprintName = "everyMind"
-            ReferencedContainer = "container:everyMind.xcodeproj">
+            BuildableName = "meuFilhoBoard.app"
+            BlueprintName = "meuFilhoBoard"
+            ReferencedContainer = "container:meuFilhoBoard.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "everyMind.app"
-            BlueprintName = "everyMind"
-            ReferencedContainer = "container:everyMind.xcodeproj">
+            BuildableName = "meuFilhoBoard.app"
+            BlueprintName = "meuFilhoBoard"
+            ReferencedContainer = "container:meuFilhoBoard.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

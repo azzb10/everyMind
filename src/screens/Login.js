@@ -1,72 +1,108 @@
 /* eslint-disable prettier/prettier */
-import React from 'react';
+import React, { useState } from 'react';
 import {
   View,
   Text,
   StyleSheet,
   TextInput,
   TouchableOpacity,
+  Alert,
 } from 'react-native';
-import LottieView from 'lottie-react-native';
 
 export default function Login({navigation}) {
+  const [user, setUser] = useState('');
+  const [password, setPassword] = useState('');
+  const confirm = () => {
+    if (user === '098371' && password === '123456'){
+      navigation.navigate('Main');
+    } else {
+      Alert.alert(
+        'Usuário ou senha incorreto(a)',
+        'Por favor verifique o usuário e senha',
+        [
+          { text: 'OK', onPress: () => console.log('OK Pressed')},
+        ]
+      );
+    }
+  };
   return (
     <View style={styles.container}>
+      <View style={{backgroundColor: '#2ecc71', padding: 10}}>
+        <Text style={styles.title}>MEU FILHO</Text>
+        <Text style={styles.subtitle}>BOARD</Text>
+      </View>
+      <View style={styles.welcome}>
+        <Text style={styles.welcomeTitle}>BEM-VINDO</Text>
+        <Text style={styles.welcomeSubtitle}>Por favor insira o login e a senha</Text>
+      </View>
       <View style={styles.login}>
-        <Text style={styles.title}>EVERYMIND</Text>
-        <TextInput placeholder="Usuário" style={styles.inputText} />
-        <TextInput placeholder="Senha" style={styles.inputText} />
+        <TextInput placeholder="Login" style={styles.inputText} onChangeText={text => setUser(text)} />
+        <TextInput placeholder="Senha" style={styles.inputText} onChangeText={text => setPassword(text)}/>
       </View>
       <View style={styles.touchableWrapper}>
-        <TouchableOpacity onPress={() => {navigation.navigate('Main');}}>
+        <TouchableOpacity onPress={confirm}>
           <View style={styles.styleButton}>
-            <Text> Login </Text>
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => {navigation.navigate('Register');}}>
-          <View style={styles.styleButton}>
-            <Text> Cadastrar </Text>
+            <Text style={{color: '#fff'}}> ENTRAR </Text>
           </View>
         </TouchableOpacity>
       </View>
-      <View style={{width: '50%', height: '50%', alignSelf: 'center'}}>
-
-<LottieView source={require('../utils/gifs/91574-astronaut-illustration.json')} autoPlay loop />
-</View>
+      <View style={{width: '50%', height: '50%', alignSelf: 'center'}} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 30,
-    backgroundColor: '#2ecc71',
+    backgroundColor: '#fff',
     flex: 1,
   },
   login: {
     marginTop: 20,
   },
   title: {
+    color: '#fff',
     textAlign: 'center',
-    fontSize: 25,
+    fontSize: 15,
     fontWeight: 'bold',
-    marginBottom: 40,
+  },
+  subtitle: {
+    color: '#fff',
+    textAlign: 'center',
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginTop: -10,
+  },
+  welcome: {
+    marginTop: 30,
+    alignItems: 'center',
+  },
+  welcomeTitle: {
+    color: '#2ecc71',
+    textAlign: 'center',
+    fontSize: 27,
+    fontWeight: 'bold',
+    marginBottom: 20,
+  },
+  welcomeSubtitle: {
+    fontSize: 14,
   },
   inputText: {
+    color: 'black',
     borderWidth: 1,
-    borderRadius: 5,
+    borderColor: '#aaa',
+    borderRadius: 8,
     backgroundColor: 'white',
     width: 250,
     alignSelf: 'center',
     marginTop: 10,
   },
   styleButton: {
-    backgroundColor: '#16a085',
-    width: 120,
+    backgroundColor: '#2ecc71',
+    width: 100,
     alignItems: 'center',
     alignSelf: 'center',
-    marginTop: 10,
-    borderRadius: 5,
+    marginTop: 30,
+    borderRadius: 8,
     paddingVertical: 10,
     marginHorizontal: 5,
   },
